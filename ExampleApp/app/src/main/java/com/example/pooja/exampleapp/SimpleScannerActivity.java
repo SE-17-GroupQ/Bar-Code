@@ -16,7 +16,7 @@ import com.google.zxing.Result;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 /**
- * Created by Rajesh on 2/16/2017.
+ * Created by Pooja on 2/16/2017.
  */
 
 public class SimpleScannerActivity extends Activity implements ZXingScannerView.ResultHandler {
