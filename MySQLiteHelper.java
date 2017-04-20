@@ -1,27 +1,26 @@
-package com.example.pooja.sqlitetutorial;
+package com.se17.attendancesystem;
 
-/**
- * Created by Pooja on 3/1/2017.
- */
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-public class MySQLiteHelper extends SQLiteOpenHelper {
+/**
+ * Created by Pooja on 4/4/2017.
+ */
 
-    public static final String TABLE_COMMENTS = "comments";
-    public static final String COLUMN_ID = "_id";
-    public static final String COLUMN_COMMENT = "comment";
+public class MySQLiteHelper extends SQLiteOpenHelper{
 
-    private static final String DATABASE_NAME = "commments.db";
+    public static final String TABLE_COMMENTS = "barcode";
+    public static final String COLUMN_BARCODE_STRING = "barcodeString";
+
+    private static final String DATABASE_NAME = "barcode.db";
     private static final int DATABASE_VERSION = 1;
 
     // Database creation sql statement
-    private static final String DATABASE_CREATE = "create table "
-            + TABLE_COMMENTS + "( " + COLUMN_ID
-            + " integer primary key autoincrement, " + COLUMN_COMMENT
-            + " text not null);";
+    private static final String DATABASE_CREATE = "CREATE TABLE "
+            + TABLE_COMMENTS + "( " + COLUMN_BARCODE_STRING
+            + " TEXT)";
 
     public MySQLiteHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
